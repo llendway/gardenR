@@ -6,6 +6,8 @@
 \alias{gardenR-package}
 \title{gardenR: Data Package With Data From Lisa Lendway's Garden}
 \description{
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+
 This is a data package with datasets recorded manually by Lisa Lendway.
 }
 \keyword{internal}

@@ -1,7 +1,7 @@
 #' Data from Lisa Lendway's backyard garden
 #'
 #' During the summer of 2020, Dr. Lisa Lendway decided it would be fun to collect data on the vegetables she harvested from her backyard garden, which she fondly calls the "jungle garden."  This dataset summarizes how much was spent on gardening materials.
-#' @format A tibble with 781 rows and 5 variables:
+#' @format A tibble with 65 rows and 6 variables:
 #' \describe{
 #'   \item{vegetable}{type of vegetable seed/plant OR other supply type, ie. dirt}
 #'   \item{variety}{variety of vegetable seed/plant OR further description of other product}
