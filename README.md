@@ -9,11 +9,8 @@ Introduction to Data Science course at Macalester College to introduce
 many concepts. For examples, see the [tutorials for the
 course](https://ds112-lendway.netlify.app/).
 
-If you’d like a visual tour of the garden, check it out:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iGMgLFIiSxo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-
-</iframe>
+If you’d like a visual tour of the garden, check out this [YouTube
+video](https://www.youtube.com/embed/iGMgLFIiSxo).
 
 ## Installation
 
@@ -25,14 +22,55 @@ You can install the development version from
 devtools::install_github("llendway/gardenR")
 ```
 
+## Datasets
+
+`garden_harvest`: Each row is a “harvest” of a particular vegetable
+variety. So, each time she harvested a particular vegetable/variety
+combination, she weighed the entire harvest. There could be multiple
+harvests of a vegetable/variety combination in a single day. There are
+two exceptions: all pumpkin and winter squash (vegetable = “squash”)
+were weighed individually.
+
+`garden_spending`: summarizes how much was spent on gardening materials.
+
+`garden_planting`: The rows represent the planting of a vegetable
+variety. There could be multiple rows for the same vegetable variety, if
+they were planted on the same day in different plots or on different
+days.
+
+`garden_coords`: This dataset gives coordinates for the vertices of the
+plots in the garden.
+
 ## Example
 
-Here is one example plot
+Here is a representation of the plots in the garden - like a bird’s eye
+view of the garden.
 
 ``` r
 library(gardenR)
 library(tidyverse)
 
+for_labs <- garden_coords %>% 
+  group_by(plot) %>% 
+  summarize(x = mean(x),
+            y = mean(y))
+
+garden_coords %>% 
+  ggplot(aes(x = x, y = y, group = plot)) +
+  geom_polygon() +
+  geom_text(data = for_labs, 
+            aes(x = x, y = y, label = plot), 
+            color = "hotpink",
+            size = 5) +
+  theme_void() +
+  theme(panel.background = element_rect(fill = "lightgray"))
+```
+
+<img src="man/figures/README-plot-1.png" width="100%" />
+
+Here is one example plot, using the `garden_harvest` data.
+
+``` r
 garden_harvest %>% 
   filter(vegetable == "tomatoes") %>% 
   group_by(date) %>% 
