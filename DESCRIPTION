@@ -1,6 +1,6 @@
 Package: gardenR
 Title: Data Package With Data From Lisa Lendway's Garden
-Version: 0.1.0
+Version: 1.0.0
 Author: person("Lisa",
                  "Lendway",
                  "lisalendway@gmail.com",
