@@ -1,8 +1,8 @@
-#' Data from Lisa Lendway's backyard garden
+#' Data from Lisa Lendway's backyard garden, summer 2021
 #'
-#' During the summer of 2020, Dr. Lisa Lendway decided it would be fun to collect data on the vegetables she harvested from her backyard garden, which she fondly calls the "jungle garden."  The rows represent the planting of a vegetable variety. There could be multiple rows for the same vegetable variety, if they were planted on the same day in different plots or on different days.
+#' See documentation for the garden_planting dataset for more detail. The rows represent the planting of a vegetable variety. There could be multiple rows for the same vegetable variety, if they were planted on the same day in different plots or on different days.
 #'
-#' @format A tibble with 93 rows and 7 variables:
+#' @format A tibble with 102 rows and 7 variables:
 #' \describe{
 #'   \item{plot}{label of plot where vegetables were planted - see garden_coords dataset for more info}
 #'   \item{vegetable}{type of vegetable planted}
@@ -13,4 +13,4 @@
 #'   \item{notes}{mostly missing but intially created just in case}
 #' }
 #' @source Manually collected by Lisa Lendway, initially in a Google sheet.
-"garden_planting"
+"planting_2021"
