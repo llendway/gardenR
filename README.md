@@ -4,7 +4,8 @@
 # gardenR <img src='man/figures/logo.png' align="right" height="139" />
 
 The `gardenR` package contains data collected by Lisa Lendway from her
-vegetable garden in the summer of 2020. The data were used in her
+vegetable garden, starting in the summer of 2020. Data from the summer
+of 2021 was added 2022-01-29 (finally!). The data were used in her
 Introduction to Data Science course at Macalester College to introduce
 many concepts. For examples, see the [tutorials for the
 course](https://ds112-lendway.netlify.app/).
@@ -24,6 +25,11 @@ devtools::install_github("llendway/gardenR")
 
 ## Datasets
 
+`garden_coords`: This dataset gives coordinates for the vertices of the
+plots in the garden.
+
+### 2020 (first year I collected data)
+
 `garden_harvest`: Each row is a “harvest” of a particular vegetable
 variety. So, each time she harvested a particular vegetable/variety
 combination, she weighed the entire harvest. There could be multiple
@@ -38,8 +44,13 @@ variety. There could be multiple rows for the same vegetable variety, if
 they were planted on the same day in different plots or on different
 days.
 
-`garden_coords`: This dataset gives coordinates for the vertices of the
-plots in the garden.
+### 2021
+
+`harvest_2021`: Similar to `garden_harvest` but for 2021.
+
+`spending_2021`: Similar to `garden_spending` but for 2021.
+
+`planting_2021`: Similar to `garden_planting` but for 2021.
 
 ## Example
 
